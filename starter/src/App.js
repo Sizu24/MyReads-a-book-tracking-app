@@ -1,40 +1,15 @@
 import "./App.css";
-import { useState } from "react";
+import { Route, Routes } from "react-router-dom";
 import Search from "./Search";
-import CurrentlyReading from "./CurrentlyReading";
-import WantToRead from "./WantToRead";
-import Read from "./Read";
+import Homepage from "./Homepage";
 
 function App() {
-  const [showSearchPage, setShowSearchpage] = useState(false);
 
   return (
-    <div className="app">
-
-      {showSearchPage ? (
-        <Search show={showSearchPage} closePage={setShowSearchpage}/>
-      ) : (
-        
-        <div className="list-books">
-
-          <div className="list-books-title">
-            <h1>MyReads</h1>
-          </div>
-
-          <div className="list-books-content">
-            <div>
-            <CurrentlyReading />
-            <WantToRead />
-            <Read />
-            </div>
-          </div>
-          <div className="open-search">
-            <a onClick={() => setShowSearchpage(!showSearchPage)}>Add a book</a>
-          </div>
-        </div>
-
-      )}
-    </div>
+    <Routes>
+      <Route path="/search" element={ <Search /> } />
+      <Route path="/" element={ <Homepage /> } />
+    </Routes>
   );
 }
 

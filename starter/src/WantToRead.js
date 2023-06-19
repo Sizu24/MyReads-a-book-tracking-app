@@ -17,6 +17,7 @@ function WantToRead() {
 									}}
 								>
 								</div>
+
 								<div className="book-shelf-changer">
 									<select>
 										<option value="none" disabled>
@@ -30,6 +31,7 @@ function WantToRead() {
 										<option value="none">None</option>
 									</select>
 								</div>
+
 							</div>
 							<div className="book-title">1776</div>
 							<div className="book-authors">David McCullough</div>
@@ -48,6 +50,7 @@ function WantToRead() {
 									}}
 								>
 								</div>
+
 								<div className="book-shelf-changer">
 									<select>
 										<option value="none" disabled>
@@ -61,6 +64,7 @@ function WantToRead() {
 										<option value="none">None</option>
 									</select>
 								</div>
+								
 							</div>
 							<div className="book-title">
 								Harry Potter and the Sorcerer's Stone

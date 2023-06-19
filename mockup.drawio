@@ -1,0 +1,70 @@
+<mxfile host="app.diagrams.net" modified="2023-06-19T16:45:27.710Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" etag="6xulcah3fo5wmLDDdwOx" version="21.5.0" type="device">
+  <diagram name="Page-1" id="S_2PA9SzlehRDYMQqpDL">
+    <mxGraphModel dx="2074" dy="1116" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="zqbJwgy498u2cQTdWAzz-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.544;entryY=-0.017;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="zqbJwgy498u2cQTdWAzz-1" target="zqbJwgy498u2cQTdWAzz-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zqbJwgy498u2cQTdWAzz-1" value="Main Page" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="10" y="60" width="830" height="590" as="geometry" />
+        </mxCell>
+        <mxCell id="zqbJwgy498u2cQTdWAzz-2" value="Search page" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="10" y="780" width="830" height="290" as="geometry" />
+        </mxCell>
+        <mxCell id="zqbJwgy498u2cQTdWAzz-4" value="&lt;h1&gt;Currently Reading&lt;/h1&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="100" y="80" width="670" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="zqbJwgy498u2cQTdWAzz-15" value="&lt;h1&gt;Want to Read&lt;/h1&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="100" y="270" width="670" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="zqbJwgy498u2cQTdWAzz-16" value="&lt;h1&gt;Read&lt;/h1&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="100" y="460" width="670" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="zqbJwgy498u2cQTdWAzz-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="zqbJwgy498u2cQTdWAzz-1" target="zqbJwgy498u2cQTdWAzz-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zqbJwgy498u2cQTdWAzz-22" value="Title" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="10" y="10" width="830" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="zqbJwgy498u2cQTdWAzz-39" value="Show books&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="357.5" y="100" width="195" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="zqbJwgy498u2cQTdWAzz-26" value="Book&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="380" y="140" width="50" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="zqbJwgy498u2cQTdWAzz-27" value="Book&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="430" y="140" width="50" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="zqbJwgy498u2cQTdWAzz-30" value="Book&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="480" y="140" width="50" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="zqbJwgy498u2cQTdWAzz-43" value="Show books&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="357.5" y="280" width="195" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="zqbJwgy498u2cQTdWAzz-31" value="Book&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="380" y="325" width="50" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="zqbJwgy498u2cQTdWAzz-32" value="Book&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="430" y="325" width="50" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="zqbJwgy498u2cQTdWAzz-33" value="Book&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="480" y="325" width="50" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="zqbJwgy498u2cQTdWAzz-44" value="Show books&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="357.5" y="480" width="195" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="zqbJwgy498u2cQTdWAzz-34" value="Book&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="380" y="520" width="50" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="zqbJwgy498u2cQTdWAzz-35" value="Book&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="430" y="520" width="50" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="zqbJwgy498u2cQTdWAzz-36" value="Book&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="480" y="520" width="50" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

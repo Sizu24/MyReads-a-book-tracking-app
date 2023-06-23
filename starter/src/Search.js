@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import * as BooksAPI from "./BooksAPI";
-import ShowBooks from "./ShowBooks";
+import Books from "./Books";
 import { useState } from 'react';
 
-function Search() {
-  const [searchResults, setSearchResults] = useState([]);
+function Search({ getBooks, books }) {
+  // const [searchResults, setSearchResults] = useState([]);
 
   const handleSearch = (e) => {
     const value = e.target.value;
@@ -12,9 +12,11 @@ function Search() {
   }
 
   const getSearchResults = async (value) => {
-    const res = await BooksAPI.search(value, 10);
-    if (res) {
-      setSearchResults(res);
+    const res = await BooksAPI.search(value);
+    if (res !== undefined) {
+      getBooks(res);
+    } else {
+      getBooks([]);
     }
   }
 
@@ -35,11 +37,7 @@ function Search() {
       <div className="search-books-results">
         <ol className="books-grid">
         {
-          searchResults.map(( book, index ) => (
-            <li key={index}>
-              <ShowBooks book={ book } />
-            </li>
-          ))
+          books.length > 0 ? books.map(( book, index ) => <li key={index}><Books book={ book } /></li>) : ""
         }
         </ol>
       </div>

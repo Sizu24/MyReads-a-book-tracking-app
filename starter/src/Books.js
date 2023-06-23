@@ -1,7 +1,9 @@
-function ShowBooks({ book, getBookStatus }) {
+function Books({ book, getBookStatus }) {
+  book.shelf = 'none';
 
 const handleSelect = (e) => {
   const value = e.target.value;
+  book.shelf = value;
 }
 
   return (
@@ -36,4 +38,4 @@ const handleSelect = (e) => {
   )
 }
 
-export default ShowBooks;
+export default Books;

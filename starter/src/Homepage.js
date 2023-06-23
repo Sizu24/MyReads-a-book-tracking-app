@@ -6,8 +6,6 @@ import { useState } from 'react';
 
 function Homepage() {
 
-  const [bookStatus, setStatus] = useState("");
-
   return (
     <div className="app">
       <div className="list-books">

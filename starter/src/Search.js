@@ -1,16 +1,24 @@
 import { Link } from "react-router-dom";
-import { Serialize } from "form-serialize";
+import * as BooksAPI from "./BooksAPI";
+import ShowBooks from "./ShowBooks";
+import { useState } from 'react';
 
-function Search({show, closePage}) {
+function Search() {
+  const [searchResults, setSearchResults] = useState([]);
 
-  const searchBook = (e) => {
+  const handleSearch = (e) => {
     const value = e.target.value;
-
-    const searchResults = BooksAPI.search(value, 10);
-    console.log(searchResults);
+    getSearchResults(value);
   }
 
-  return(
+  const getSearchResults = async (value) => {
+    const res = await BooksAPI.search(value, 10);
+    if (res) {
+      setSearchResults(res);
+    }
+  }
+
+  return (
     <div className="search-books">
       <div className="search-books-bar">
 
@@ -19,14 +27,20 @@ function Search({show, closePage}) {
         </Link>
 
         <div className="search-books-input-wrapper">
-          <input onChange={searchBook} type="text" name="book" placeholder="Search by title, author, or ISBN" />
+          <input onChange={handleSearch} type="text" name="book" placeholder="Search by title, author, or ISBN" />
         </div>
 
       </div>
 
       <div className="search-books-results">
         <ol className="books-grid">
-
+        {
+          searchResults.map(( book, index ) => (
+            <li key={index}>
+              <ShowBooks book={ book } />
+            </li>
+          ))
+        }
         </ol>
       </div>
 

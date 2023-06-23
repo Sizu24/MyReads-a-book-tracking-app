@@ -2,8 +2,12 @@ import { Link } from "react-router-dom";
 import CurrentlyReading from "./CurrentlyReading";
 import WantToRead from "./WantToRead";
 import Read from "./Read";
+import { useState } from 'react';
 
 function Homepage() {
+
+  const [bookStatus, setStatus] = useState("");
+
   return (
     <div className="app">
       <div className="list-books">
@@ -28,3 +32,5 @@ function Homepage() {
 }
 
 export default Homepage;
+
+

@@ -1,12 +1,14 @@
 import { Link } from "react-router-dom";
 import * as BooksAPI from "./BooksAPI";
 import Books from "./Books";
-import { useState } from 'react';
 
-function Search({ getBooks, books }) {
-  // const [searchResults, setSearchResults] = useState([]);
+function Search({ books, getBooks, updateShelf }) {
 
-  const handleSearch = (e) => {
+	const bookShelfSelection = (bookId, value) => {
+		updateShelf(bookId, value);
+	}
+
+  const getSearchValue = (e) => {
     const value = e.target.value;
     getSearchResults(value);
   }
@@ -29,7 +31,7 @@ function Search({ getBooks, books }) {
         </Link>
 
         <div className="search-books-input-wrapper">
-          <input onChange={handleSearch} type="text" name="book" placeholder="Search by title, author, or ISBN" />
+          <input onChange={getSearchValue} type="text" name="book" placeholder="Search by title, author, or ISBN" />
         </div>
 
       </div>
@@ -37,7 +39,11 @@ function Search({ getBooks, books }) {
       <div className="search-books-results">
         <ol className="books-grid">
         {
-          books.length > 0 ? books.map(( book, index ) => <li key={index}><Books book={ book } /></li>) : ""
+          books.length > 0 &&
+            books.map(( book, index ) =>
+              <li key={index}>
+                <Books book={ book } bookShelfSelection={bookShelfSelection} />
+              </li>)
         }
         </ol>
       </div>

@@ -2,9 +2,8 @@ import { Link } from "react-router-dom";
 import CurrentlyReading from "./CurrentlyReading";
 import WantToRead from "./WantToRead";
 import Read from "./Read";
-import { useState } from 'react';
 
-function Homepage() {
+function Homepage({ books, updateShelf }) {
 
   return (
     <div className="app">
@@ -15,9 +14,9 @@ function Homepage() {
 
         <div className="list-books-content">
           <div>
-            <CurrentlyReading />
-            <WantToRead />
-            <Read />
+            <CurrentlyReading books={ books } updateShelf={updateShelf} />
+            <WantToRead books={ books } updateShelf={updateShelf} />
+            <Read books={ books } updateShelf={updateShelf} />
           </div>
         </div>
 

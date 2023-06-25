@@ -1,10 +1,4 @@
-function Books({ book, getBookStatus }) {
-  book.shelf = 'none';
-
-const handleSelect = (e) => {
-  const value = e.target.value;
-  book.shelf = value;
-}
+function Books({ book, bookShelfSelection }) {
 
   return (
     <div className="book">
@@ -19,7 +13,7 @@ const handleSelect = (e) => {
         }}
         ></div>
         <div className="book-shelf-changer">
-          <select onChange={handleSelect}>
+          <select defaultValue={'none'} onChange={(e) => bookShelfSelection(book.id, e.target.value)}>
               <option value="none" disabled>
               Move to...
               </option>

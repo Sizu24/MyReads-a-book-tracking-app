@@ -1,15 +1,9 @@
 import Books from "./Books";
-import { useState } from "react";
-import { Link } from "react-router-dom";
 
-function CurrentlyReading() {
+function CurrentlyReading({ books, updateShelf }) {
 
-  // State
-	const [currentlyReading, setCurrentlyReading] = useState([]);
-
-  // Functions
-	function getCurrentlyReading(bookNames) {
-		setCurrentlyReading(bookNames);
+	const bookShelfSelection = (bookId, value) => {
+		updateShelf(bookId, value);
 	}
 
   return(
@@ -17,13 +11,14 @@ function CurrentlyReading() {
 			<h2 className="bookshelf-title">Currently Reading</h2>
 			<div className="bookshelf-books">
 				<ol className="books-grid">
-          {/* {
-            searchResults.map(( book, index ) => (
-              <li key={index}>
-                <Books book={ book } />
+          {
+            books.length > 0 && books.map(( book, index ) => (
+							book.shelf === "currentlyReading" &&
+              <li key={ index }>
+                <Books book={ book } bookShelfSelection={ bookShelfSelection } />
               </li>
             ))
-          } */}
+          }
 				</ol>
 			</div>
 		</div>
@@ -31,3 +26,6 @@ function CurrentlyReading() {
 }
 
 export default CurrentlyReading;
+
+
+//

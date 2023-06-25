@@ -13,7 +13,7 @@ function Books({ book, bookShelfSelection }) {
         }}
         ></div>
         <div className="book-shelf-changer">
-          <select defaultValue={'none'} onChange={(e) => bookShelfSelection(book.id, e.target.value)}>
+          <select defaultValue={'none'} onChange={(e) => bookShelfSelection(book, e.target.value)}>
               <option value="none" disabled>
               Move to...
               </option>

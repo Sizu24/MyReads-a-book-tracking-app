@@ -1,11 +1,14 @@
 import { Link } from "react-router-dom";
 import * as BooksAPI from "./BooksAPI";
 import Books from "./Books";
+import { useState } from "react";
 
-function Search({ books, getBooks, updateShelf }) {
+function Search({ updateShelf }) {
 
-	const bookShelfSelection = (bookId, value) => {
-		updateShelf(bookId, value);
+  const [searchedBooks, setSearchedBooks] = useState([]);
+
+	const bookShelfSelection = (book, value) => {
+		updateShelf(book, value);
 	}
 
   const getSearchValue = (e) => {
@@ -13,12 +16,21 @@ function Search({ books, getBooks, updateShelf }) {
     getSearchResults(value);
   }
 
+  // const getSearchResults = async (value) => {
+  //   const res = await BooksAPI.search(value);
+  //   if (res !== undefined) {
+  //     getBooks(res);
+  //   } else {
+  //     getBooks([]);
+  //   }
+  // }
+
   const getSearchResults = async (value) => {
     const res = await BooksAPI.search(value);
     if (res !== undefined) {
-      getBooks(res);
+      setSearchedBooks(res);
     } else {
-      getBooks([]);
+      setSearchedBooks([]);
     }
   }
 
@@ -39,8 +51,8 @@ function Search({ books, getBooks, updateShelf }) {
       <div className="search-books-results">
         <ol className="books-grid">
         {
-          books.length > 0 &&
-            books.map(( book, index ) =>
+          searchedBooks.length > 0 &&
+            searchedBooks.map(( book, index ) =>
               <li key={index}>
                 <Books book={ book } bookShelfSelection={bookShelfSelection} />
               </li>)

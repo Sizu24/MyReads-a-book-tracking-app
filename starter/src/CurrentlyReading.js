@@ -2,8 +2,8 @@ import Books from "./Books";
 
 function CurrentlyReading({ books, updateShelf }) {
 
-	const bookShelfSelection = (bookId, value) => {
-		updateShelf(bookId, value);
+	const bookShelfSelection = (book, value) => {
+		updateShelf(book, value);
 	}
 
   return(

@@ -6,39 +6,43 @@ import Search from "./Search";
 import Homepage from "./Homepage";
 
 function App() {
-    // State
-   const [books, setBooks] = useState([]);
+  // State
+  const [books, setBooks] = useState([]);
 
-   useEffect(() => {
-    const getAllBooks = async() => {
-      const res = await BooksAPI.getAll();
-      setBooks(res);
+  useEffect(() => {
+  const getAllBooks = async() => {
+    const res = await BooksAPI.getAll();
+    setBooks(res);
+  }
+  getAllBooks();
+  }, [books]);
+
+  //  const getBooks = (books) => {
+  //   setBooks(books);
+  //  };
+
+  //  const updateShelf = (bookId, value) => {
+  //     setBooks((prevBooks) => 
+  //       prevBooks.map((book) => book.id === bookId ? { ...book, shelf: value } : book
+  //     )
+  //   );
+  //   console.log(bookId);
+  //   console.log(value);
+  //  };
+
+  const updateShelf = (book, value) => {
+    const updateBooks = async () => {
+      const res = await BooksAPI.update(book, value);
+      console.log(res);
+      setBooks((prevBooks) => prevBooks.map((book) => [{...book, res }]))
     }
-    getAllBooks();
-    console.log(books);
-   }, []);
-
-   const getBooks = (books) => {
-    setBooks(books);
-   };
-
-   const updateShelf = (bookId, value) => {
-      setBooks((prevBooks) => 
-        prevBooks.map((book) => book.id === bookId ? { ...book, shelf: value } : book
-      )
-    );
-    console.log(bookId);
-    console.log(value);
-   };
-
-   useEffect(() => {
-    console.log(books);
-   }, [books]);
+    updateBooks();
+  };
 
   return (
     <Routes>
       <Route exact path="/" element={ <Homepage books={books} updateShelf={updateShelf}/> } />
-      <Route exact path="/search" element={ <Search books={books} getBooks={getBooks} updateShelf={updateShelf} /> } />
+      <Route exact path="/search" element={ <Search updateShelf={updateShelf} /> } />
     </Routes>
   );
 }
